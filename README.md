@@ -56,6 +56,5 @@ El sistema no solo rastrea la pelota, sino que también evalúa su rendimiento c
   ```bash
    python final.py
 
----
 
 
