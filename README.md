@@ -48,18 +48,20 @@ El sistema no solo rastrea la pelota, sino que también evalúa su rendimiento c
    ```bash
    git clone https://github.com/tu_usuario/proyecto_ojo_halcon.git
    
-2.	Accede a la carpeta del proyecto:
+2. Accede a la carpeta del proyecto:
    ```bash
    cd proyecto_ojo_halcon
 
-3.	Ejecuta el archivo final.py para poner en marcha todo el sistema:
+3. Ejecuta el archivo final.py para poner en marcha todo el sistema:
   ```bash
    python final.py
 
-## 📂 Estructura de Archivos
+---
 
-	•	data/videos/ : Vídeos de demostración de secuencias y tracker.
-	•	output_videos/ : Vídeos generados por el sistema y tasa de refresco en tiempo real.
-	•	final.py : Fichero principal que ejecuta el sistema completo.
-	•	tracker.py : Implementación del módulo de seguimiento.
-	•	security_code.py : Módulo de validación de secuencias.
+### ***📂 Estructura de Archivos***
+
+	• data/videos/ : Vídeos de demostración de secuencias y tracker.
+	• output_videos/ : Vídeos generados por el sistema y tasa de refresco en tiempo real.
+	• final.py : Fichero principal que ejecuta el sistema completo.
+	• tracker.py : Implementación del módulo de seguimiento.
+	• security_code.py : Módulo de validación de secuencias.
