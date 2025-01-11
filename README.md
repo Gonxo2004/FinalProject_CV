@@ -1,28 +1,65 @@
-# 🎾 Sistema de Seguimiento Hawk-Eye para Tenis 
+# 🏸 **Eye of the Hawk: Sistema de Seguimiento de Pelota de Tenis** 🟢🔴  
 
-Bienvenido al **Sistema Hawk-Eye** para el seguimiento de una pelota de tenis en tiempo real. Este innovador proyecto combina visión por computador y lógica de puntuación para ofrecer una experiencia única en el análisis del juego. 🎥✨
+### **📖 Descripción General**  
+¡Bienvenido al proyecto **Eye of the Hawk**! 🦅 Este sistema, desarrollado para **Raspberry Pi**, emula las funcionalidades del famoso "Ojo de Halcón", detectando y siguiendo una pelota de tenis en tiempo real. 🎾  
 
----
-
-## 📋 Descripción del Proyecto  
-El **Sistema Hawk-Eye** es una solución alojada en una Raspberry Pi diseñada para rastrear y analizar el movimiento de una pelota de tenis durante un partido. Con módulos que abarcan desde calibración de cámara hasta seguimiento avanzado, este sistema destaca por su capacidad para contar puntos basados en el rendimiento del seguimiento. ⚡
+El sistema no solo rastrea la pelota, sino que también evalúa su rendimiento con un **contador de puntos**, penalizando retrasos y premiando respuestas rápidas. 🕹️  
 
 ---
 
-## 🚀 Características  
-- 📸 **Calibración precisa de cámara** utilizando un tablero de ajedrez.  
-- 🔍 **Detección de patrones geométricos** y colores para activar funciones avanzadas.  
-- 🕒 **Seguimiento en tiempo real** con bounding box.  
-- 🏆 **Sistema de puntuación** basado en el tiempo de recuperación del tracker.  
-- 🌟 **Optimización y ejecución eficiente** en tiempo real en una Raspberry Pi.  
+### **✨ Características Principales**  
+✅ **Calibración de Cámara**: Configura la cámara usando un tablero de ajedrez.  
+🔍 **Detección de Patrones**: Reconoce figuras geométricas como cuadrados, triángulos y círculos, además de colores específicos.  
+🔑 **Validación por Secuencia**: Activa el sistema solo al introducir la secuencia correcta de patrones.  
+🎯 **Seguimiento Preciso**: Identifica y rastrea la pelota con una **bounding box**.  
+🏆 **Contador de Puntos**: Evalúa el rendimiento del sistema en tiempo real.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas  
-- **Lenguaje**: Python  
-- **Plataforma**: Raspberry Pi  
-- **Librerías**: OpenCV  
+### **📂 Estructura del Proyecto**  
+📜 **`final.py`**: Script principal que combina `tracker.py` y `security_code.py`.  
+📜 **`tracker.py`**: Módulo que detecta y sigue la pelota.  
+📜 **`security_code.py`**: Valida secuencias de patrones geométricos.  
+📁 **`data/videos`**: Vídeos de pruebas del tracker y la validación de secuencias.  
+📁 **`output_videos`**: Vídeos generados por el sistema, con métricas en tiempo real.
 
 ---
 
-¡Prepárate para llevar el análisis de tenis al siguiente nivel! 🎾✨
+### **🚀 Instalación**  
+
+#### **Requisitos Previos**  
+🔧 **Hardware**:  
+- Raspberry Pi con cámara compatible. 📷  
+- Accesorios básicos (fuente de alimentación, tarjeta SD, etc.).  
+
+💻 **Software**:  
+- Python 3.11 🐍  
+- Librerías necesarias:  
+   ```bash
+   pip install opencv-python numpy
+-	Conectar la Cámara
+  Configura y habilita la cámara de la Raspberry Pi:
+    ```bash
+    sudo raspi-config
+   
+## 🚀 Cómo Ejecutarlo
+
+1. Clona este repositorio en tu Raspberry Pi:
+   ```bash
+   git clone https://github.com/tu_usuario/proyecto_ojo_halcon.git
+   
+2.	Accede a la carpeta del proyecto:
+   ```bash
+   cd proyecto_ojo_halcon
+
+3.	Ejecuta el archivo final.py para poner en marcha todo el sistema:
+  ```bash
+   python final.py
+
+## 📂 Estructura de Archivos
+
+	•	data/videos/ : Vídeos de demostración de secuencias y tracker.
+	•	output_videos/ : Vídeos generados por el sistema y tasa de refresco en tiempo real.
+	•	final.py : Fichero principal que ejecuta el sistema completo.
+	•	tracker.py : Implementación del módulo de seguimiento.
+	•	security_code.py : Módulo de validación de secuencias.
